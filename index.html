@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yix | Links</title>
+  <style>
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(-45deg, #100f1f, #1a1633, #201a40, #14122a);
+      background-size: 400% 400%;
+      animation: bgMove 12s ease infinite;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ff7ee2, #7dd3fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 1.2s ease;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 6px;
+      margin-bottom: 30px;
+      animation: fadeIn 1.6s ease;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 90%;
+      max-width: 320px;
+      animation: slideUp 1.8s ease;
+    }
+
+    .link {
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .link:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.4);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.8rem;
+      color: #aaa;
+      letter-spacing: 0.5px;
+    }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ====== RWD ====== */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .link {
+        font-size: 0.95rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Yix</h1>
+  <p>R&B / Rap Lover | 高三學生</p>
+
+  <div class="links">
+    <a class="link" href="https://github.com/你的GitHub帳號" target="_blank">💻 GitHub</a>
+    <a class="link" href="mailto:你的Email@gmail.com">📧 Email</a>
+    <a class="link" href="https://www.linkedin.com/in/你的LinkedIn" target="_blank">💼 LinkedIn</a>
+    <a class="link" href="https://www.instagram.com/你的IG帳號" target="_blank">📸 Instagram</a>
+  </div>
+
+  <footer>© 2025 Yix | Made with ❤️ & R&B vibes</footer>
+
+  <script>
+    // --- 小動畫：按鈕閃爍波光 ---
+    const links = document.querySelectorAll('.link');
+    links.forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.boxShadow = '0 0 25px rgba(255, 150, 255, 0.5)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.05)';
+      });
+    });
+  </script>
+</body>
+</html>
